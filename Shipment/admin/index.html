@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Cargo Track WB</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a href="#">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Admin Dashboard</h1>
+    <div class="form-container">
+      <h2>Add Shipment</h2>
+      <form id="shipment-form">
+        <div class="form-group">
+          <label for="client-name">Client Name</label>
+          <input type="text" id="client-name" name="clientName" required>
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone Number</label>
+          <input type="text" id="phone-number" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" min="0" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" name="status" required>
+            <option value="" disabled selected>Select a status</option>
+            <option value="In Warehouse">In Warehouse</option>
+            <option value="On the Way">On the Way</option>
+            <option value="Delivered">Delivered</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" required>
+        </div>
+        <div class="form-group">
+          <label for="track-id">Track ID</label>
+          <input type="text" id="track-id" name="trackId" required>
+        </div>
+        <button type="submit">Add Shipment</button>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Shipment ID</th>
+            <th>Client Name</th>
+            <th>Phone Number</th>
+            <th>Weight (kg)</th>
+            <th>Status</th>
+            <th>Location</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="shipment-table">
+          <!-- This will be populated by JavaScript -->
+       </tbody>
+       
+      </table>
+      
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
